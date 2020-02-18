@@ -1,0 +1,26 @@
+package classe;
+
+public class Usuarios 
+{
+	String nome;
+	String email;
+	
+	public boolean equals (Object objeto) 
+	{
+		if ( objeto instanceof Usuarios)
+		{
+			Usuarios outro = (Usuarios) objeto;//fez um casting transformando e uma instancia
+			boolean nomeIgual = outro.nome.equals(this.nome);
+			boolean emailIgual = outro.email.equals(this.email);
+			
+			return nomeIgual && emailIgual;
+		}else {
+			return false;
+		}
+	}
+	
+	public int hashCode() {
+		return  0 ;
+	}
+	
+}
